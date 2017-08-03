@@ -685,7 +685,6 @@ class CommonGLPI {
 
       $target         = $_SERVER['PHP_SELF'];
       $extraparamhtml = "";
-      $extraparam     = "";
       $withtemplate   = "";
       if (is_array($options) && count($options)) {
          if (isset($options['withtemplate'])) {
@@ -699,7 +698,6 @@ class CommonGLPI {
             unset($cleaned_options['stock_image']);
          }
          $extraparamhtml = "&amp;".Toolbox::append_params($cleaned_options,'&amp;');
-         $extraparam     = "&".Toolbox::append_params($cleaned_options);
       }
       echo "<div class='glpi_tabs ".($this->isNewID($ID)?"new_form_tabs":"")."'>";
       echo "<div id='tabspanel' class='center-h'></div>";
