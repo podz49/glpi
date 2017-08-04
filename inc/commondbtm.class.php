@@ -760,7 +760,7 @@ class CommonDBTM extends CommonGLPI {
          $saved = Html::cleanPostForTextArea($_SESSION['saveInput'][$this->getType()]);
 
          // clear saved data when restored (only need once)
-         $this->clearSavedInput();
+         unset($_SESSION['saveInput'][$this->getType()]);
 
          return $saved;
       }

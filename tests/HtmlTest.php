@@ -153,8 +153,8 @@ class HtmlTest extends PHPUnit\Framework\TestCase {
     * @covers Html::cleanPostForTextArea
     */
    public function testCleanPostForTextArea() {
-      $origin = "A text that \\\"would\\\" be entered in a \\'textarea\\'\\nWith breakline\\r\\nand breaklines.\\\\nAnd special linefeed.";
-      $expected = "A text that \"would\" be entered in a 'textarea'\nWith breakline\nand breaklines.\nAnd special linefeed.";
+      $origin = "A text that \\\"would\\\" be entered in a \\'textarea\\'\\nWith breakline\\r\\nand breaklines.";
+      $expected = "A text that \"would\" be entered in a 'textarea'\nWith breakline\nand breaklines.";
       $this->assertEquals($expected, Html::cleanPostForTextArea($origin));
 
       $aorigin = [

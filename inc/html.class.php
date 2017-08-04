@@ -282,13 +282,11 @@ class Html {
          return array_map(array(__CLASS__, __METHOD__), $value);
       }
       $order   = array('\r\n',
-                       '\\\\n',
                        '\n',
                        "\\'",
                        '\"',
                        '\\\\');
       $replace = array("\n",
-                       "\n",
                        "\n",
                        "'",
                        '"',

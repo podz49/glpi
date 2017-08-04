@@ -697,12 +697,7 @@ class CommonGLPI {
          if (isset($cleaned_options['stock_image'])) {
             unset($cleaned_options['stock_image']);
          }
-         if ($this->getType() == 'Ticket') {
-            $this->input = $cleaned_options;
-            $this->saveInput();
-         } else {
-            $extraparamhtml = "&amp;".Toolbox::append_params($cleaned_options,'&amp;');
-         }
+         $extraparamhtml = "&amp;".Toolbox::append_params($cleaned_options,'&amp;');
       }
       echo "<div class='glpi_tabs ".($this->isNewID($ID)?"new_form_tabs":"")."'>";
       echo "<div id='tabspanel' class='center-h'></div>";
